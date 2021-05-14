@@ -283,6 +283,8 @@ def katz_predict(G: object, df_nodes: dict) -> dict:
     sortDic = {}
     left_set = list(set(nx.bipartite.sets(G)[0]))
     right_set = list(set(nx.bipartite.sets(G)[1]))
+    print('left_set:',left_set)
+    print('right_set:',right_set)
 
     out.write('(left_element, right_element)')
     out.write(",")
