@@ -67,7 +67,7 @@ def katz_similarity(node_i: int, node_j: int, graph) -> float:
     max_length = 2
     beta = 0.1
     print('node_i:',node_i)
-    pritn('node_j:',node_j)
+    print('node_j:',node_j)
 
     while length <= max_length:
         print('set neighbors:', neighbors)
