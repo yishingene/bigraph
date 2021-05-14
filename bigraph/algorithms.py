@@ -77,4 +77,5 @@ def katz_similarity(node_i: int, node_j: int, graph) -> float:
             neighbours_for_next_loop += set(graph[k])
         neighbors = neighbours_for_next_loop
         length += 1
+    print(score)
     return score
