@@ -69,7 +69,7 @@ def katz_similarity(node_i: int, node_j: int, graph) -> float:
 
     while length <= max_length:
         number_of_paths = list(neighbors).count(node_j)
-        print(number_of_paths)
+        print('number_of_paths:',number_of_paths)
         if number_of_paths > 0:
             score += (beta ** length) * number_of_paths
 
@@ -78,5 +78,5 @@ def katz_similarity(node_i: int, node_j: int, graph) -> float:
             neighbours_for_next_loop += set(graph[k])
         neighbors = neighbours_for_next_loop
         length += 1
-    print(score)
+    print('score:',score)
     return score
