@@ -62,13 +62,13 @@ def katz_similarity(node_i: int, node_j: int, graph) -> float:
     :return: Katz similarity score
     """
     length = 1
-    neighbors = list(graph[node_i])
+    neighbors = set(graph[node_i])
     score = 0
     max_length = 2
     beta = 0.1
 
     while length <= max_length:
-        number_of_paths = neighbors.count(node_j)
+        number_of_paths = list(neighbors).count(node_j)
         if number_of_paths > 0:
             score += (beta ** length) * number_of_paths
 
